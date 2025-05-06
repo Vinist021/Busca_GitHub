@@ -1,3 +1,4 @@
+var usersHistory = [];
 
 function search() {
     var username = document.getElementById('inputUsername').value;
@@ -9,6 +10,13 @@ function search() {
 function insertUser(url) {
     $.getJSON(url, (user) => {
         showUserData(user);
+        if(isNew(user))
+        {
+            save(user);
+            showNewUserHistory(user);
+        }
+        
+        
         clearError();
 
     }).fail( () => {
@@ -25,6 +33,22 @@ function showUserData(user) {
                                                     `<img src="${user.avatar_url}" alt="avatar" width="220" height="220" class="shadow rounded">`
                                                     :
                                                     "";
+}
+
+function isNew(user) {
+    return usersHistory.filter( (u) => u.login === user.login).length == 0;
+}
+
+function save(user) {
+    usersHistory.push(user);
+}
+
+function showNewUserHistory(user) {
+    document.getElementById('history').innerHTML += `
+        <div class="col">
+            <img id="avatar_url" src="${user.avatar_url}" alt="avatar" width="110" height="110" class="shadow rounded">
+        </div>
+        ` 
 }
 
 function showError(msg) {
