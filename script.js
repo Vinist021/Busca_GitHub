@@ -23,6 +23,7 @@ function insertUser(url) {
     }).fail( () => {
         showUserData({});
         showError('Usuário não encontrado!');
+        clearHeaderUser();
     });
 }
 
@@ -63,6 +64,10 @@ function clearError() {
 
 function showHeaderUser() {
     document.getElementById('headerUser').innerHTML = 'Dados do Usuário:'
+}
+
+function clearHeaderUser() {
+    document.getElementById('headerUser').innerHTML = '';
 }
 
 function showHeaderHistory() {
