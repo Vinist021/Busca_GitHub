@@ -10,12 +10,13 @@ function search() {
 function insertUser(url) {
     $.getJSON(url, (user) => {
         showUserData(user);
+        showHeaderUser();
+        showHeaderHistory();
         if(isNew(user))
         {
             save(user);
             showNewUserHistory(user);
         }
-        
         
         clearError();
 
@@ -58,4 +59,12 @@ function showError(msg) {
 
 function clearError() {
     document.getElementById('error').innerHTML = '';
+}
+
+function showHeaderUser() {
+    document.getElementById('headerUser').innerHTML = 'Dados do Usuário:'
+}
+
+function showHeaderHistory() {
+    document.getElementById('headerHistory').innerHTML = 'Dados Pesquisados:'
 }
