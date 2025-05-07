@@ -29,7 +29,7 @@ function insertUser(url) {
 
 function showUserData(user) {
     document.getElementById('name').innerHTML = user.name || '';
-    document.getElementById('html_url').innerHTML = user.html_url || '';
+    document.getElementById('html_url').innerHTML = user.html_url ? `<a href="${user.html_url}">${user.html_url}</a>` : '';
     document.getElementById('company').innerHTML = user.company || '';
     document.getElementById('avatar_url').innerHTML = user.avatar_url ? 
                                                     `<img src="${user.avatar_url}" alt="avatar" width="220" height="220" class="shadow rounded">`
