@@ -5,6 +5,7 @@ function search() {
     var url = `https://api.github.com/users/${username}`;
 
     insertUser(url);
+    clearInput();
 }
 
 function insertUser(url) {
@@ -49,12 +50,11 @@ function showNewUserHistory(user) {
         <div class="col">
             <img id="avatar_url" src="${user.avatar_url}" alt="avatar" width="110" height="110" class="shadow rounded">
         </div>
-        ` 
+        `;
 }
 
 function showError(msg) {
     document.getElementById('error').innerHTML = `<div class="alert alert-danger mt-2" role="alert">${msg}!</div>`;
-   
 }
 
 function clearError() {
@@ -62,7 +62,7 @@ function clearError() {
 }
 
 function showHeaderUser() {
-    document.getElementById('headerUser').innerHTML = 'Dados do Usuário:'
+    document.getElementById('headerUser').innerHTML = 'Dados do Usuário:';
 }
 
 function clearHeaderUser() {
@@ -70,5 +70,9 @@ function clearHeaderUser() {
 }
 
 function showHeaderHistory() {
-    document.getElementById('headerHistory').innerHTML = 'Dados Pesquisados:'
+    document.getElementById('headerHistory').innerHTML = 'Dados Pesquisados:';
+}
+
+function clearInput() {
+    document.getElementById('inputUsername').value = '';
 }
