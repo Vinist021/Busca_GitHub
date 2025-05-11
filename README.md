@@ -2,8 +2,6 @@
 
 Este projeto é uma aplicação web desenvolvida com **HTML**, **CSS**, **JavaScript**, **Bootstrap** e **jQuery**, que consome a [GitHub REST API](https://docs.github.com/pt/rest/users/users) para buscar informações públicas de perfis do GitHub a partir do nome de usuário.
 
-
-
 ## 🚀 Funcionalidades
 
 -  Buscar informações de um usuário do GitHub via API
@@ -11,15 +9,12 @@ Este projeto é uma aplicação web desenvolvida com **HTML**, **CSS**, **JavaSc
 -  Exibir histórico de usuários pesquisados (com foto)
 -  Exibir mensagem de erro caso o usuário não seja encontrado
 
-
-
-
 ## 🧪 Tecnologias Utilizadas
 
-- HTML5
-- CSS3
-- Bootstrap 5.3.5
+- HTML
+- CSS
 - JavaScript
+- Bootstrap 5.3.5
 - jQuery
 - GitHub REST API
 
