@@ -24,6 +24,6 @@ Este projeto é uma aplicação web desenvolvida com **HTML**, **CSS**, **JavaSc
 - GitHub REST API
 
 ## 📎 Acesso
-🚀 Acesse o projeto: [Busca de Perfis no GitHub](https://vinist021.github.io/Projeto_GitHub_Profiles/) 
+🚀 Acesse o projeto: [Busca de Perfis no GitHub](https://vinist021.github.io/Busca_GitHub/) 
 
 
